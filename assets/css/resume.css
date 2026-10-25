@@ -17,6 +17,26 @@
   margin-bottom: 2.5rem;
 }
 
+/* Photo sits left of the name block on wide screens. */
+.resume-head-grid {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.resume-photo {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* face sits in the upper third of the source frame — bias the crop up */
+  object-position: 50% 18%;
+  display: block;
+  border: 2px solid var(--green);
+  box-shadow: 0 0 0 6px rgba(127, 255, 127, 0.08);
+}
+
 .resume-eyebrow {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
@@ -70,6 +90,24 @@
   font-size: 0.82rem;
   color: var(--text3);
 }
+
+.resume-download {
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.resume-download a {
+  color: var(--green);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(127, 255, 127, 0.35);
+  padding-bottom: 1px;
+  font-weight: 600;
+}
+.resume-download a:hover { border-bottom-color: var(--green); }
+.resume-download .dl-note { color: var(--text3); font-size: 0.72rem; }
 
 /* ── Sections ── */
 .rsection { margin-bottom: 2.75rem; }
@@ -380,6 +418,8 @@
 
 @media (max-width: 700px) {
   .resume-wrap { padding: 2.25rem 1.25rem 3rem; }
+  .resume-head-grid { grid-template-columns: 1fr; gap: 1.1rem; }
+  .resume-photo { width: 104px; height: 104px; box-shadow: 0 0 0 5px rgba(127, 255, 127, 0.08); }
   .resume-name { font-size: clamp(2rem, 9vw, 2.6rem); }
   .resume-role { font-size: 1rem; }
   .resume-contact { font-size: 0.78rem; }
@@ -480,6 +520,13 @@
   .resume-contact { font-size: 7.6pt; line-height: 1.6; }
   .resume-availability { margin-top: 0.5rem; padding: 0.35rem 0.6rem; font-size: 7.6pt; }
   .resume-head { padding-bottom: 0.7rem; margin-bottom: 0.9rem; }
+  /* photo stays in the printed CV — headshot is standard for this market */
+  .resume-head-grid { grid-template-columns: 24mm 1fr; gap: 6mm; align-items: center; }
+  .resume-photo {
+    width: 24mm; height: 24mm;
+    border: 1px solid #d8d8d8 !important;
+    box-shadow: none !important;
+  }
   .case { margin-bottom: 0.75rem; padding-left: 0.8rem; }
   .case-title { font-size: 9.2pt; }
   .case-head { margin-bottom: 0.25rem; }
