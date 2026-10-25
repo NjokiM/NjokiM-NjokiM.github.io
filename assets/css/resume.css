@@ -1,0 +1,491 @@
+/* ── Résumé page ─────────────────────────────────────────────
+   Extends assets/css/style.css. Same tokens, document layout.
+   ──────────────────────────────────────────────────────────── */
+
+.resume-page { background: var(--bg); }
+
+.resume-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem 4rem;
+}
+
+/* ── Header ── */
+.resume-head {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.resume-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 1rem;
+}
+
+.resume-name {
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #f0f7f0;
+  margin-bottom: 0.6rem;
+}
+
+.resume-role {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text3);
+  margin-bottom: 1.25rem;
+}
+
+.resume-contact {
+  font-size: 0.82rem;
+  color: var(--text4);
+  line-height: 1.9;
+  word-break: break-word;
+}
+
+.resume-contact a {
+  color: var(--text2);
+  border-bottom: 1px solid var(--text7);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.resume-contact a:hover {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+.resume-contact .sep { color: var(--text7); margin: 0 0.4rem; }
+
+.resume-availability {
+  margin-top: 1.25rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 2px solid var(--green);
+  background: #0f160f;
+  font-size: 0.82rem;
+  color: var(--text3);
+}
+
+/* ── Sections ── */
+.rsection { margin-bottom: 2.75rem; }
+
+.rtitle {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text3);
+  font-weight: 600;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.rlead {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text4);
+}
+
+.rlead a { color: var(--green); border-bottom: 1px solid var(--text6); }
+.rlead a:hover { border-color: var(--green); }
+
+/* ── Fit table ── */
+.fit {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.fit th {
+  text-align: left;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text4);
+  font-weight: 600;
+  padding: 0 0 0.7rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.fit td {
+  padding: 0.85rem 0.9rem 0.85rem 0;
+  border-bottom: 1px solid var(--border2);
+  color: var(--text4);
+  line-height: 1.65;
+  vertical-align: top;
+}
+
+.fit td:first-child {
+  color: var(--text2);
+  font-weight: 600;
+  width: 36%;
+}
+
+.fit tr:last-child td { border-bottom: none; }
+
+/* ── Specialist grid ── */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.spec {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.25rem 1.15rem;
+  background: #0d140d;
+  transition: border-color 0.2s;
+}
+
+.spec:hover { border-color: var(--text7); }
+
+.spec-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--green);
+  margin-bottom: 0.9rem;
+  line-height: 1.3;
+}
+
+.spec-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+}
+
+.spec-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.spec-list li {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--text4);
+  padding-left: 0.85rem;
+  position: relative;
+}
+
+.spec-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--text7);
+}
+
+.spec-list strong { color: var(--text2); font-weight: 600; }
+
+/* ── Case studies ── */
+.case {
+  border-left: 2px solid var(--text7);
+  padding: 0 0 0 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.case:last-child { margin-bottom: 0; }
+
+.case-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.case-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #eaf3ea;
+  line-height: 1.35;
+}
+
+.case-meta {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text4);
+  white-space: nowrap;
+}
+
+.case-body {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text4);
+  margin-bottom: 0.75rem;
+}
+
+.case-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.case-list li {
+  font-size: 0.84rem;
+  line-height: 1.65;
+  color: var(--text4);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.case-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--text6);
+  font-size: 0.7rem;
+  top: 0.15rem;
+}
+
+.case-list strong { color: var(--text2); font-weight: 600; }
+
+/* ── Experience ── */
+.xp {
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--border2);
+}
+
+.xp:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.xp-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.xp-role {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #eaf3ea;
+  line-height: 1.35;
+}
+
+.xp-date {
+  font-size: 0.7rem;
+  color: var(--text4);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.xp-org {
+  font-size: 0.8rem;
+  color: var(--text5);
+  margin: 0.2rem 0 0.6rem;
+}
+
+.xp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.xp-list li {
+  font-size: 0.83rem;
+  line-height: 1.65;
+  color: var(--text4);
+  padding-left: 0.9rem;
+  position: relative;
+}
+
+.xp-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0.2rem;
+  color: var(--text6);
+  font-weight: 700;
+}
+
+/* ── Skills ── */
+.skills {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 0.7rem 1.25rem;
+  font-size: 0.83rem;
+}
+
+.skills dt {
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text4);
+  padding-top: 0.15rem;
+}
+
+.skills dd { color: var(--text4); line-height: 1.65; }
+
+/* ── Plain list ── */
+.plain {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.plain li {
+  font-size: 0.84rem;
+  line-height: 1.65;
+  color: var(--text4);
+  padding-left: 0.9rem;
+  position: relative;
+}
+
+.plain li::before {
+  content: "·";
+  position: absolute;
+  left: 0.2rem;
+  color: var(--text6);
+  font-weight: 700;
+}
+
+.plain strong { color: var(--text2); font-weight: 600; }
+
+/* ── Footer ── */
+.resume-foot {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .spec-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+  .resume-wrap { padding: 2.25rem 1.25rem 3rem; }
+  .resume-name { font-size: clamp(2rem, 9vw, 2.6rem); }
+  .resume-role { font-size: 1rem; }
+  .resume-contact { font-size: 0.78rem; }
+  .resume-contact .sep { display: block; height: 0; overflow: hidden; }
+
+  .fit, .fit tbody, .fit tr, .fit td { display: block; width: 100%; }
+  .fit thead { display: none; }
+  .fit tr {
+    border-bottom: 1px solid var(--border2);
+    padding: 0.9rem 0;
+  }
+  .fit tr:last-child { border-bottom: none; }
+  .fit td { border-bottom: none; padding: 0; }
+  .fit td:first-child { width: auto; margin-bottom: 0.3rem; }
+
+  .skills { grid-template-columns: 1fr; gap: 0.25rem; }
+  .skills dt { margin-top: 0.7rem; }
+
+  .case { padding-left: 0.9rem; }
+  .resume-foot { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Print: clean white A4 ── */
+@page { size: A4; margin: 14mm; }
+
+@media print {
+  :root {
+    --bg: #ffffff;
+    --bg2: #ffffff;
+    --border: #d8d8d8;
+    --border2: #e8e8e8;
+    --text: #111111;
+    --text2: #1a1a1a;
+    --text3: #333333;
+    --text4: #3a3a3a;
+    --text5: #4a4a4a;
+    --text6: #6a6a6a;
+    --text7: #b0b0b0;
+    --green: #1f6b3a;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* paint the full page white, not just the body box — otherwise the
+     margins stay transparent and can render dark in themed PDF viewers */
+  html { min-height: 100%; }
+  body { min-height: 100vh; box-shadow: 0 0 0 100vmax #ffffff; clip-path: inset(0 -100vmax); }
+
+  .no-print, .map-accent, nav, .resume-foot { display: none !important; }
+
+  .resume-wrap { max-width: none; padding: 0; margin: 0; }
+
+  .resume-name, .case-title, .xp-role { color: #111111 !important; }
+
+  .resume-eyebrow { color: #1f6b3a !important; }
+
+  .resume-availability {
+    background: #f5f5f5 !important;
+    border-left: 2px solid #1f6b3a !important;
+    color: #333333 !important;
+  }
+
+  .spec {
+    background: #ffffff !important;
+    border: 1px solid #d8d8d8 !important;
+  }
+
+  .spec-title { color: #1f6b3a !important; }
+
+  a { color: #111111 !important; text-decoration: none !important; border: none !important; }
+
+  .rsection { margin-bottom: 0.95rem; }
+
+  .rtitle { margin-bottom: 0.6rem; padding-bottom: 0.35rem; font-size: 0.6rem; }
+
+  /* Only small blocks must stay whole. Long sections are allowed to flow so
+     pages fill instead of jumping and leaving half-empty pages. */
+  .spec, .case-head, .xp-head, .fit tr { break-inside: avoid; page-break-inside: avoid; }
+  .rtitle { break-after: avoid; page-break-after: avoid; }
+  .rsection, .case, .xp, table { break-inside: auto; page-break-inside: auto; }
+
+  .spec-grid { grid-template-columns: repeat(3, 1fr); gap: 0.45rem; }
+  .spec { padding: 0.6rem 0.55rem; }
+  .spec-title { font-size: 8pt; margin-bottom: 0.4rem; }
+  .spec-list { gap: 0.28rem; }
+  .spec-list li, .case-list li, .xp-list li, .plain li { font-size: 8pt; line-height: 1.4; }
+  .case-list, .xp-list, .plain { gap: 0.22rem; }
+  .fit td { font-size: 8pt; padding: 0.32rem 0.5rem 0.32rem 0; line-height: 1.42; }
+  .fit th { padding-bottom: 0.35rem; }
+  .skills { font-size: 8pt; grid-template-columns: 118px 1fr; gap: 0.3rem 1rem; }
+  .rlead, .case-body { font-size: 8.6pt; line-height: 1.45; }
+  .resume-name { font-size: 21pt; margin-bottom: 0.3rem; }
+  .resume-role { font-size: 9.5pt; margin-bottom: 0.6rem; }
+  .resume-eyebrow { font-size: 0.58rem; margin-bottom: 0.4rem; }
+  .resume-contact { font-size: 7.6pt; line-height: 1.6; }
+  .resume-availability { margin-top: 0.5rem; padding: 0.35rem 0.6rem; font-size: 7.6pt; }
+  .resume-head { padding-bottom: 0.7rem; margin-bottom: 0.9rem; }
+  .case { margin-bottom: 0.75rem; padding-left: 0.8rem; }
+  .case-title { font-size: 9.2pt; }
+  .case-head { margin-bottom: 0.25rem; }
+  .case-body { margin-bottom: 0.35rem; }
+  .xp { margin-bottom: 0.6rem; padding-bottom: 0.55rem; }
+  .xp-role { font-size: 9pt; }
+  .xp-org { font-size: 7.6pt; margin: 0.1rem 0 0.3rem; }
+  .xp-date { font-size: 7pt; }
+}
