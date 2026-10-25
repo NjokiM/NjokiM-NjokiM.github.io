@@ -388,6 +388,26 @@ footer {
   margin-top: 0.5rem;
 }
 
+/* ── About header: portrait + title ── */
+.about-head {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.about-photo {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* face sits in the upper third of the source frame — bias the crop up */
+  object-position: 50% 18%;
+  display: block;
+  border: 2px solid var(--green);
+  box-shadow: 0 0 0 6px rgba(127, 255, 127, 0.08);
+}
+
 /* ── Prose (about page) ── */
 .prose {
   font-family: var(--font-serif);
@@ -481,6 +501,9 @@ footer {
   .sidebar { padding: 1.5rem 1.25rem; border-top: 1px solid var(--border); }
 
   .main-col--prose { padding: 2rem 1.25rem; }
+
+  .about-head { grid-template-columns: 1fr; gap: 1.25rem; }
+  .about-photo { width: 104px; height: 104px; box-shadow: 0 0 0 5px rgba(127, 255, 127, 0.08); }
 
   .contact-grid { grid-template-columns: 1fr; }
 
