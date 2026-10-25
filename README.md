@@ -13,6 +13,7 @@ NjokiM-NjokiM.github.io/
 │   ├── css/
 │   │   ├── style.css           ← Site styles (shared tokens)
 │   │   └── resume.css          ← Résumé styles + print stylesheet
+│   ├── img/njoki-headshot.jpg  ← Header portrait (600×600, cropped from NJOKI_2025.JPG)
 │   └── js/main.js              ← Mobile nav
 └── README.md
 ```
