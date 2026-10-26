@@ -18,6 +18,19 @@ NjokiM-NjokiM.github.io/
 └── README.md
 ```
 
+## Content notes
+
+The site is a general portfolio: it is not tailored to any single client or
+tender. It advertises WordPress and Django website builds plus data
+engineering work, and the résumé carries a plain-language
+"Past work & technical projects" summary for non-technical readers.
+
+When editing that summary, keep it in the full-width `.case-list` layout.
+Chrome emits per-glyph positioning inside the narrow `.spec` cards, which
+makes PDF text extraction collapse spaces (`Why it matters` becomes
+`Whyitmatters`). Full-width lists keep the text layer clean and stay
+readable for non-technical readers.
+
 ## Live
 
 - Site: https://njokim.github.io/NjokiM-NjokiM.github.io/

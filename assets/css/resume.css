@@ -494,9 +494,9 @@
 
   a { color: #111111 !important; text-decoration: none !important; border: none !important; }
 
-  .rsection { margin-bottom: 0.95rem; }
+  .rsection { margin-bottom: 0.7rem; }
 
-  .rtitle { margin-bottom: 0.6rem; padding-bottom: 0.35rem; font-size: 0.6rem; }
+  .rtitle { margin-bottom: 0.5rem; padding-bottom: 0.3rem; font-size: 0.6rem; }
 
   /* Only small blocks must stay whole. Long sections are allowed to flow so
      pages fill instead of jumping and leaving half-empty pages. */
@@ -505,11 +505,11 @@
   .rsection, .case, .xp, table { break-inside: auto; page-break-inside: auto; }
 
   .spec-grid { grid-template-columns: repeat(3, 1fr); gap: 0.45rem; }
-  .spec { padding: 0.6rem 0.55rem; }
+  .spec { padding: 0.48rem 0.5rem; }
   .spec-title { font-size: 8pt; margin-bottom: 0.4rem; }
-  .spec-list { gap: 0.28rem; }
+  .spec-list { gap: 0.2rem; }
   .spec-list li, .case-list li, .xp-list li, .plain li { font-size: 8pt; line-height: 1.4; }
-  .case-list, .xp-list, .plain { gap: 0.22rem; }
+  .case-list, .xp-list, .plain { gap: 0.17rem; }
   .fit td { font-size: 8pt; padding: 0.32rem 0.5rem 0.32rem 0; line-height: 1.42; }
   .fit th { padding-bottom: 0.35rem; }
   .skills { font-size: 8pt; grid-template-columns: 118px 1fr; gap: 0.3rem 1rem; }
@@ -519,7 +519,7 @@
   .resume-eyebrow { font-size: 0.58rem; margin-bottom: 0.4rem; }
   .resume-contact { font-size: 7.6pt; line-height: 1.6; }
   .resume-availability { margin-top: 0.5rem; padding: 0.35rem 0.6rem; font-size: 7.6pt; }
-  .resume-head { padding-bottom: 0.7rem; margin-bottom: 0.9rem; }
+  .resume-head { padding-bottom: 0.6rem; margin-bottom: 0.72rem; }
   /* photo stays in the printed CV — headshot is standard for this market */
   .resume-head-grid { grid-template-columns: 24mm 1fr; gap: 6mm; align-items: center; }
   .resume-photo {
@@ -527,11 +527,11 @@
     border: 1px solid #d8d8d8 !important;
     box-shadow: none !important;
   }
-  .case { margin-bottom: 0.75rem; padding-left: 0.8rem; }
+  .case { margin-bottom: 0.6rem; padding-left: 0.8rem; }
   .case-title { font-size: 9.2pt; }
   .case-head { margin-bottom: 0.25rem; }
   .case-body { margin-bottom: 0.35rem; }
-  .xp { margin-bottom: 0.6rem; padding-bottom: 0.55rem; }
+  .xp { margin-bottom: 0.48rem; padding-bottom: 0.42rem; }
   .xp-role { font-size: 9pt; }
   .xp-org { font-size: 7.6pt; margin: 0.1rem 0 0.3rem; }
   .xp-date { font-size: 7pt; }
